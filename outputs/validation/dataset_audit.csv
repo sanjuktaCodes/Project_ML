@@ -1,0 +1,15 @@
+feature,kind,minimum,maximum,distinct_values,observed_codes,missing_values
+age,numeric,29.0,77.0,41,,0
+sex,coded category,0.0,1.0,2,"0, 1",0
+cp,coded category,0.0,3.0,4,"0, 1, 2, 3",0
+trestbps,numeric,94.0,200.0,49,,0
+chol,numeric,126.0,564.0,152,,0
+fbs,coded category,0.0,1.0,2,"0, 1",0
+restecg,coded category,0.0,2.0,3,"0, 1, 2",0
+thalach,numeric,71.0,202.0,91,,0
+exang,coded category,0.0,1.0,2,"0, 1",0
+oldpeak,numeric,0.0,6.2,40,,0
+slope,coded category,0.0,2.0,3,"0, 1, 2",0
+ca,coded category,0.0,4.0,5,"0, 1, 2, 3, 4",0
+thal,coded category,0.0,3.0,4,"0, 1, 2, 3",0
+target,coded category,0.0,1.0,2,"0, 1",0

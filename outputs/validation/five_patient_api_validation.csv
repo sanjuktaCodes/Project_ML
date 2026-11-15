@@ -1,0 +1,6 @@
+Patient,Actual,Predicted,Class_1_Probability,Top_SHAP_Feature,Top_LIME_Feature,Top_5_Overlap,SHAP_Reconstruction_Error
+1,0,0,0.215567,sex,ca,4,4.719353676740923e-07
+2,0,1,0.541224,ca,ca,3,3.696446977952128e-07
+3,0,0,0.003696,ca,ca,4,3.6421312898937686e-07
+4,0,1,0.646427,ca,ca,4,1.6779943813327591e-06
+5,0,1,0.951212,sex,ca,5,8.521421284157782e-07
