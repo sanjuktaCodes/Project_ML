@@ -43,16 +43,30 @@ export default function App() {
   }, [loadMetrics]);
 
   const runPrediction = async (patient) => {
-    setPredicting(true); setPredictionError(''); setExplanationError('');
-    setPrediction(null); setExplanations(null); setLastPaitent(null);
-    try {
-      const result = await predictPatient(patient);
-      setLastPatient(patient);
-      setPrediction(result);
-      setHealth(true);
-    } catch (error) { setPredictionError(error.message); }
-    finally { setPredicting(false); }
-  };
+  setPredicting(true);
+  setPredictionError('');
+  setExplanationError('');
+  setPrediction(null);
+  setExplanations(null);
+  setLastPatient(null);
+
+  try {
+    const result = await predictPatient(patient);
+
+    setLastPatient(patient);
+    setPrediction(result);
+    setHealth(true);
+
+  } catch (error) {
+    console.error("Prediction failed:", error);
+    setPredictionError(
+      error.message || "Prediction failed. Please try again."
+    );
+
+  } finally {
+    setPredicting(false);
+  }
+};
 
   const runExplanation = async () => {
     if (!lastPatient) { setPage('prediction'); return; }
